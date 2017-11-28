@@ -21,3 +21,6 @@
 # git (vim fugitive)
 - Git comando // Ejecuta un commando de git
 - Gwrite // Graba fichero y hace add
+
+# Mapeos que dan la vida
+\s // Search & replace

@@ -77,3 +77,9 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 nmap <F8> :TagbarToggle<CR>
+
+" Map search & replace
+":nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
+
+
