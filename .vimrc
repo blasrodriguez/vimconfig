@@ -9,6 +9,10 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+# Solarized theme
+set background=dark
+colorscheme solarized
+
 " Ignore case and smart case
 set ignorecase
 set smartcase
@@ -32,7 +36,7 @@ let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
 
 "GO
-set number
+#set number
 let g:go_disable_autoinstall = 0
 
 " Highlight
