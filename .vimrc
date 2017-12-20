@@ -4,12 +4,17 @@ filetype plugin indent on
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 set nocompatible
 
+set autoindent
+
+" For ansible plugin
+" au BufRead,BufNewFile */ansible/*.yml set filetype=ansible
+
 " No backup ugly files
 set nobackup
 set nowritebackup
 set noswapfile
 
-# Solarized theme
+" Solarized theme
 set background=dark
 colorscheme solarized
 
@@ -36,7 +41,7 @@ let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
 
 "GO
-#set number
+" set number
 let g:go_disable_autoinstall = 0
 
 " Highlight
@@ -86,4 +91,12 @@ nmap <F8> :TagbarToggle<CR>
 ":nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 :nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
+" YAML 2 spaces tab
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" Syntax for Jenkinsfile (jenkins pipeline)
+autocmd BufNewFile,BufRead *Jenkinsfile set syntax=groovy
+autocmd BufNewFile,BufRead *Jenkinsfile setlocal expandtab tabstop=4 shiftwidth=4
+autocmd BufNewFile,BufRead *.groovy set syntax=groovy
+autocmd BufNewFile,BufRead *.groovy setlocal expandtab tabstop=4 shiftwidth=4
 
