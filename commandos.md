@@ -16,7 +16,7 @@
 - :map //mostrar los keybindings
 - :e /path/del-fichero //Abrir fichero
 - :read fichero.txt :read !comando bash //inserta resultado de fichero o comando
-- <C-6> //Moverse al otro buffer
+- numeroDeBuffer<C-6> //Moverse al otro buffer
 - :wqa //Grabar todos los buffers y salir
 - :cd ~/Code/ProjectB //Cambiar de directorio
 
