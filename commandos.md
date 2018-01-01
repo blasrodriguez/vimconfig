@@ -19,6 +19,8 @@
 - numeroDeBuffer<C-6> //Moverse al otro buffer
 - :wqa //Grabar todos los buffers y salir
 - :cd ~/Code/ProjectB //Cambiar de directorio
+- numeroDeBuffer<C-6> //Moverse al otro buffer
+
 
 ## git (vim fugitive)
 - Git comando // Ejecuta un commando de git
@@ -46,3 +48,24 @@
 - dd Deletes the current line
 - **D Deletes from the cursor until the end of the line (same as d$)**
 - **gx Opens the URL under your cursor in a web browser**
+
+
+# Movimientos
+- 0 Moves cursor to the start of the line
+- $ Moves cursor to the end of the line (inclusive of newline)
+- g_ Moves cursor to the end of the line (exclusive of newline)
+- b Moves cursor backward through each word
+- e Moves cursor to the end of the word
+- w Moves cursor to the start of the next word
+- gg Moves cursor to the start of the buffer
+- G Moves cursor to the end of the buffer
+- % Moves cursor to the next bracket (or parenthesis)
+- ( Moves cursor to the previous sentence
+- ) Moves cursor to the next sentence
+- { Moves cursor to the start of a paragraph
+- } Moves cursor to the end of a paragraph
+- [( Moves cursor to previous available parenthesis
+- ]) Moves cursor to next available parenthesis
+- [{ Moves cursor to previous available bracket
+- ]} Moves cursor to next available bracket
+
