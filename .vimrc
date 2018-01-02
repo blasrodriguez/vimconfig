@@ -100,3 +100,14 @@ autocmd BufNewFile,BufRead *Jenkinsfile setlocal expandtab tabstop=4 shiftwidth=
 autocmd BufNewFile,BufRead *.groovy set syntax=groovy
 autocmd BufNewFile,BufRead *.groovy setlocal expandtab tabstop=4 shiftwidth=4
 
+
+" Folding por sintax
+:set foldmethod=syntax
+
+" Paste keybinding
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+
+" Highlight search results
+:set hlsearch
+
