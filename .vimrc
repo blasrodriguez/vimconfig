@@ -1,20 +1,30 @@
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
 set nocompatible
 
 set autoindent
-
-" For ansible plugin
-" au BufRead,BufNewFile */ansible/*.yml set filetype=ansible
 
 " No backup ugly files
 set nobackup
 set nowritebackup
 set noswapfile
 
+" NERDTREE
+" map — :NERDTreeToggle<CR>
+" open/close nerdtree windowç
+map <C-n> :NERDTreeToggle<CR>
+map <leader>r :NERDTreeFind<cr> “ this is the key to jump to the nerdtree window from any other window
+autocmd BufWinEnter * NERDTreeFind
+map ] :NERDTreeFind<CR> “ pressing this inside any open file in vim will jump to the nerdtree and highlight where that file is -> very useful when you have multiple files open at once
+
 " Solarized theme
+"let g:solarized_termcolors=256
+set termguicolors
 set background=dark
 colorscheme solarized
 
@@ -40,9 +50,16 @@ set hidden
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
 
+" Numeros de linea
+set number
+
 "GO
 " set number
-let g:go_disable_autoinstall = 0
+" let g:go_disable_autoinstall = 0
+"
+" Ruby
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
+autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
 
 " Highlight
 let g:go_highlight_functions = 1
@@ -111,3 +128,6 @@ set pastetoggle=<F2>
 " Highlight search results
 :set hlsearch
 
+" FZF
+set rtp+=/usr/bin/fzf
+nnoremap <silent> <C-z> :FZF<CR>
