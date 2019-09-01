@@ -17,14 +17,16 @@ set noswapfile
 " NERDTREE
 " map — :NERDTreeToggle<CR>
 " open/close nerdtree windowç
+let g:NERDTreeHijackNetrw=0
 map <C-n> :NERDTreeToggle<CR>
 map <leader>r :NERDTreeFind<cr> “ this is the key to jump to the nerdtree window from any other window
-autocmd BufWinEnter * NERDTreeFind
+"autocmd BufWinEnter * NERDTreeFind
 map ] :NERDTreeFind<CR> “ pressing this inside any open file in vim will jump to the nerdtree and highlight where that file is -> very useful when you have multiple files open at once
 
 " Solarized theme
 "let g:solarized_termcolors=256
-set termguicolors
+"set t_Co=16
+" set termguicolors
 set background=dark
 colorscheme solarized
 
