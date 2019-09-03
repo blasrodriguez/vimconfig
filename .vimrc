@@ -133,3 +133,6 @@ set pastetoggle=<F2>
 " FZF
 set rtp+=/usr/bin/fzf
 nnoremap <silent> <C-z> :FZF<CR>
+
+" Unfold by default
+set foldlevel=99
