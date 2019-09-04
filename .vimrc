@@ -9,7 +9,7 @@ set nocompatible
 
 set autoindent
 
-" No backup ugly files
+" No backup ugly filess
 set nobackup
 set nowritebackup
 set noswapfile
