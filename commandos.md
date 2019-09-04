@@ -5,7 +5,7 @@
 - :GoDoc documentacion de la funcion
 
 ## Vim
-- gt GT //movimiento entre tabs
+- Tab  //movimiento entre tabs (tb Shift+Tab)
 - :b<numero> //movimiento entre buffer
 - :bd //chapar buffer
 - :Explore //abrir el navegador de achivos

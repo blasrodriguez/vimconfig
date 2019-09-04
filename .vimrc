@@ -14,14 +14,20 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+let mapleader=" " "Space as leader key https://www.reddit.com/r/vim/wiki/the_leader_mechanism
+
 " NERDTREE
 " map — :NERDTreeToggle<CR>
 " open/close nerdtree windowç
 let g:NERDTreeHijackNetrw=0
 map <C-n> :NERDTreeToggle<CR>
-map <leader>r :NERDTreeFind<cr> “ this is the key to jump to the nerdtree window from any other window
+map <leader>r :NERDTreeFind<CR> "this is the key to jump to the nerdtree window from any other window
 "autocmd BufWinEnter * NERDTreeFind
 map ] :NERDTreeFind<CR> “ pressing this inside any open file in vim will jump to the nerdtree and highlight where that file is -> very useful when you have multiple files open at once
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "close vim if the only window left open is a NERDTree
+let NERDTreeShowHidden=1
 
 " Solarized theme
 "let g:solarized_termcolors=256
@@ -49,8 +55,10 @@ set wildmenu
 " Varios ficheros abiertos a la vez
 set hidden
 
+"Airline
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
+let g:airline#extensions#tabline#enabled = 1
 
 " Numeros de linea
 set number
@@ -136,3 +144,7 @@ nnoremap <silent> <C-z> :FZF<CR>
 
 " Unfold by default
 set foldlevel=99
+
+" Buffer cycling
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
