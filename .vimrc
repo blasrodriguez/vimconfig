@@ -68,6 +68,8 @@ set number
 " let g:go_disable_autoinstall = 0
 "
 " Ruby
+"
+autocmd FileType javascript setlocal ts=2 sts=2 sw=2
 autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 autocmd FileType eruby setlocal expandtab shiftwidth=2 tabstop=2
 
@@ -175,3 +177,11 @@ function! NeatFoldText() "{{{2
 endfunction
 set foldtext=NeatFoldText()
 " }}}2
+"
+" terraform 
+let g:terraform_fmt_on_save=1
+let g:terraform_fold_sections=1
+let g:terraform_align=1
+
+" Web Development
+autocmd BufRead,BufNewFile *.htm,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
