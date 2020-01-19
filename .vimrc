@@ -25,7 +25,6 @@ map <leader>r :NERDTreeFind<CR> "this is the key to jump to the nerdtree window 
 "autocmd BufWinEnter * NERDTreeFind
 map ] :NERDTreeFind<CR> “ pressing this inside any open file in vim will jump to the nerdtree and highlight where that file is -> very useful when you have multiple files open at once
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif "close vim if the only window left open is a NERDTree
 let NERDTreeShowHidden=1
 
@@ -34,6 +33,7 @@ let NERDTreeShowHidden=1
 "set t_Co=16
 " set termguicolors
 set background=dark
+let g:solarized_diffmode="high"
 colorscheme solarized
 
 " Ignore case and smart case
@@ -185,3 +185,6 @@ let g:terraform_align=1
 
 " Web Development
 autocmd BufRead,BufNewFile *.htm,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
+
+" FZF
+nnoremap <C-p> :<C-u>FZF<CR>
