@@ -36,4 +36,7 @@
 	url = https://github.com/tpope/vim-rails
 [submodule "bundle/coc.nvim"]
 	path = bundle/coc.nvim
-	url = https://github.com/neoclide/coc.nvim
+	url = https://github.com/neoclide/vim-rails
+[submodule "bundle/simplenote.vim"]
+	path = bundle/simplenote.vim
+	url = https://github.com/simplenote-vim/simplenote.vim
