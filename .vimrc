@@ -84,7 +84,7 @@ let g:go_highlight_build_constraints = 1
 let g:airline_powerline_fonts = 1
 
 "NeoComplete
-let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#enable_at_startup = 1
 
 "Tag bar
 let g:tagbar_type_go = {
@@ -188,3 +188,7 @@ autocmd BufRead,BufNewFile *.htm,*.html setlocal tabstop=2 shiftwidth=2 softtabs
 
 " FZF
 nnoremap <C-p> :<C-u>FZF<CR>
+
+" Copy paste between terminals
+set clipboard^=unnamed
+
