@@ -33,6 +33,8 @@ let NERDTreeShowHidden=1
 "set t_Co=16
 " set termguicolors
 set background=dark
+"set background=light
+
 let g:solarized_diffmode="high"
 colorscheme solarized
 
@@ -178,10 +180,10 @@ endfunction
 set foldtext=NeatFoldText()
 " }}}2
 "
-" terraform 
-let g:terraform_fmt_on_save=1
-let g:terraform_fold_sections=1
-let g:terraform_align=1
+" terraform
+"let g:terraform_fmt_on_save=1
+"let g:terraform_fold_sections=1
+"let g:terraform_align=1
 
 " Web Development
 autocmd BufRead,BufNewFile *.htm,*.html setlocal tabstop=2 shiftwidth=2 softtabstop=2
@@ -190,5 +192,13 @@ autocmd BufRead,BufNewFile *.htm,*.html setlocal tabstop=2 shiftwidth=2 softtabs
 nnoremap <C-p> :<C-u>FZF<CR>
 
 " Copy paste between terminals
-set clipboard^=unnamed
+set clipboard=unnamedplus
 
+" Rust
+ let g:rustfmt_autosave = 1
+
+call plug#begin()
+Plug 'nordtheme/vim'
+call plug#end()
+
+:colorscheme nord
